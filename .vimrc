@@ -1,5 +1,4 @@
 call pathogen#infect()
-let mapleader = ","
 colorscheme Tomorrow-Night
 set wildmode=longest,list,full
 set wildmenu
