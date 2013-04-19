@@ -43,5 +43,8 @@ set autochdir
 " Allow <Leader>! to add bang to previous command.
 nnoremap <Leader>! q:kWgea!<CR>
 
-" Turn on omnicomplete.
-set ofu=syntaxcomplete#Complete
+" Fucking swp files.
+
+set backupdir=~/.vimbackups/
+set directory=~/.vimbackups/
+
