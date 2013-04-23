@@ -24,8 +24,11 @@ python << EOF
 import os.path
 import yaml
 import vim
-token = yaml.load(open(os.path.expanduser('~/.refh.yml')).read())['token']
+config = yaml.load(open(os.path.expanduser('~/.refh.yml')).read())
+token = config['token']
+user = config['user']
 vim.command("let g:refheap_token='" + token + "'")
+vim.command("let g:refheap_username='" + user + "'")
 EOF
 endfunction
 
