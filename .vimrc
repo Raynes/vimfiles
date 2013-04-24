@@ -4,6 +4,8 @@ set wildmenu
 syntax on
 filetype plugin indent on
 
+nmap <D-0> :set gfn=Menlo:h11<CR>
+
 " Because I like to use the mouse in the terminal. Get over it.
 set mouse=a
 
@@ -46,4 +48,16 @@ nnoremap <Leader>! q:kWgea!<CR>
 
 set backupdir=~/.vimbackups/
 set directory=~/.vimbackups/
+
+" Statusline.
+
+set laststatus=2 
+set statusline=%t\        "tail of the filename
+set statusline+=%{fugitive#statusline()} " Branch.
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=%y      "filetype
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
 
