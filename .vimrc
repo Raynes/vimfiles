@@ -61,3 +61,7 @@ set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 
+" Moar lispwords.
+
+set lispwords+=GET,PUT,POST,DELETE
+
