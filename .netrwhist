@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/raynes/code/refheap.vim/autoload'
-let g:netrw_dirhist_2='/Users/raynes/code/refheap.vim'
-let g:netrw_dirhist_3='/Users/raynes/code/refheap.vim/autoload'
-let g:netrw_dirhist_4='/Users/raynes/code'
-let g:netrw_dirhist_5='/Users/raynes/code/turntable/src'
-let g:netrw_dirhist_6='/Users/raynes/.vim'
-let g:netrw_dirhist_7='/Users/raynes/code/turntable'
