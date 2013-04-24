@@ -65,3 +65,6 @@ set statusline+=%l/%L   "cursor line/total lines
 
 set lispwords+=GET,PUT,POST,DELETE
 
+" Incremental search.
+
+set incsearch
