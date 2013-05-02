@@ -68,3 +68,7 @@ set lispwords+=GET,PUT,POST,DELETE
 " Incremental search.
 
 set incsearch
+
+" CSS shiftwidth
+
+autocmd Filetype css setlocal shiftwidth=2
