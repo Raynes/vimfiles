@@ -76,4 +76,13 @@ autocmd Filetype css setlocal shiftwidth=2
 " Show trailing whitespace.
 
 highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+function! s:FixWhitespace(line1,line2)
+    let l:save_cursor = getpos(".")
+    silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+
+command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
