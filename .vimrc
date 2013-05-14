@@ -51,7 +51,7 @@ set directory=~/.vimbackups/
 
 " Statusline.
 
-set laststatus=2 
+set laststatus=2
 set statusline=%t\        "tail of the filename
 set statusline+=%{fugitive#statusline()} " Branch.
 set statusline+=%m      "modified flag
@@ -72,3 +72,8 @@ set incsearch
 " CSS shiftwidth
 
 autocmd Filetype css setlocal shiftwidth=2
+
+" Show trailing whitespace.
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
