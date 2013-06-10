@@ -73,7 +73,7 @@ set incsearch
 
 autocmd Filetype css setlocal shiftwidth=2
 
-g:clojure_align_multiline_strings = 1
+let g:clojure_align_multiline_strings = 1
 
 " Show trailing whitespace.
 
