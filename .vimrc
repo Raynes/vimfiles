@@ -72,3 +72,5 @@ set incsearch
 " CSS shiftwidth
 
 autocmd Filetype css setlocal shiftwidth=2
+
+g:clojure_align_multiline_strings = 1
