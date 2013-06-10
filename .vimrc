@@ -51,7 +51,7 @@ set directory=~/.vimbackups/
 
 " Statusline.
 
-set laststatus=2 
+set laststatus=2
 set statusline=%t\        "tail of the filename
 set statusline+=%{fugitive#statusline()} " Branch.
 set statusline+=%m      "modified flag
@@ -74,3 +74,19 @@ set incsearch
 autocmd Filetype css setlocal shiftwidth=2
 
 g:clojure_align_multiline_strings = 1
+
+" Show trailing whitespace.
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+
+function! s:FixWhitespace(line1,line2)
+    let l:save_cursor = getpos(".")
+    silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+
+command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
