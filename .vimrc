@@ -63,7 +63,7 @@ set statusline+=%l/%L   "cursor line/total lines
 
 " Moar lispwords.
 
-set lispwords+=GET,PUT,POST,DELETE
+set lispwords+=GET,PUT,POST,DELETE,fact
 
 " Incremental search.
 
