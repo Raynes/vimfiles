@@ -21,6 +21,7 @@ nnoremap <leader>f =i(
 command! Ptoggle call PareditToggle()
 
 " Get the refheap plugin up and running.
+if has('python')
 function! LoadRefheapToken()
 python << EOF
 import os.path
@@ -35,6 +36,7 @@ EOF
 endfunction
 
 call LoadRefheapToken()
+endif
 
 " Fix crap.
 au FileType html setlocal textwidth=0
