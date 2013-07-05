@@ -75,6 +75,10 @@ set incsearch
 
 autocmd Filetype css setlocal shiftwidth=2
 
+" Markdown stuff.
+autocmd FileType markdown setlocal textwidth=80
+autocmd FileType markdown setlocal spell spelllang=en_us
+
 let g:clojure_align_multiline_strings = 1
 
 " Show trailing whitespace.
