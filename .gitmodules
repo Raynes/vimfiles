@@ -9,7 +9,7 @@
 	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/refheap.vim"]
 	path = bundle/refheap.vim
-	url = git@github.com:Raynes/refheap.vim.git
+	url = git://github.com/Raynes/refheap.vim.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
