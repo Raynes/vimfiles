@@ -38,11 +38,6 @@ endfunction
 call LoadRefheapToken()
 endif
 
-" Fix crap.
-au FileType html setlocal textwidth=0
-au FileType css setlocal shiftwidth=4 tabstop=4
-au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
-
 " Allow <Leader>! to add bang to previous command.
 nnoremap <Leader>! q:kWgea!<CR>
 
