@@ -94,3 +94,11 @@ command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
 
 " Fuck folding.
 set nofoldenable
+
+" No
+
+let go_highlight_trailing_whitespace_error = 0
+
+" Automatically format Go code on save.
+
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
